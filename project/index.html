@@ -1,120 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KLK Construction | Construction &amp; Interior Design</title>
-<meta name="description" content="KLK Construction delivers precision-built structures and interiors — from vision to handover.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KLK | Logamalaikannan Government Contractor — Civil Infrastructure, Madurai</title>
+  <meta name="description" content="KLK is a civil contracting business in Madurai, Tamil Nadu, delivering water infrastructure, public facilities, restoration and government construction projects." />
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- AOS (Animate On Scroll) -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-<!-- Site styles -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-<!-- ============================= NAVBAR ============================= -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-    <img src="assets/images/logo.png" alt="KLK Construction Logo" class="navbar__logo-img">
-    <div>
-        <span>KLK</span> CONSTRUCTION
-        <small></small>
+  <!-- ============ Navbar ============ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo" />
+        <span class="navbar__logo-text">
+          <strong>KLK <span>Construction</span></strong>
+          <small>Government Contractor</small>
+        </span>
+      </a>
+
+      <nav class="navbar__links" aria-label="Main">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-</a>
+  </header>
 
-    <nav class="navbar__links" aria-label="Primary">
-      <a href="index.html" class="is-active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="navbar__actions">
-      <a href="contact.html" class="btn btn--primary navbar__cta">Get a Quote</a>
-      <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="navbar__mobile">
+  <div class="navbar__mobile" id="navMobile">
     <div class="navbar__mobile__inner">
       <a href="index.html"><span>01</span>Home</a>
       <a href="about.html"><span>02</span>About</a>
       <a href="services.html"><span>03</span>Services</a>
-      <a href="gallery.html"><span>04</span>Gallery</a>
+      <a href="projects.html"><span>04</span>Projects</a>
       <a href="contact.html"><span>05</span>Contact</a>
-      <a href="contact.html" class="btn btn--primary" style="margin-top: 1rem; width: fit-content;">Get a Quote</a>
     </div>
   </div>
-</header>
 
-<div style="height: 500px;"></div>
+  <main>
 
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid blueprint-grid" aria-hidden="true"></div>
 
-<!-- ============================= FOOTER ============================= -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <a href="index.html" class="navbar__logo">KLK Construction</a>
-        <p>Construction and interiors, engineered for certainty — from blueprint to handover.</p>
+      <div class="container">
+        <div class="hero__content corner-frame">
+          <p class="eyebrow eyebrow--light hero__brand">KLK | Logamalaikannan Government Contractor</p>
+          <h1 class="hero__title">
+            <span class="hero__line"><span>Building Infrastructure.</span></span>
+            <span class="hero__line"><span>Strengthening Communities.</span></span>
+          </h1>
+          <p class="hero__lead">
+            Delivering civil engineering works across water infrastructure, public facilities, restoration, and government construction projects, with a strategic focus on highways and larger infrastructure.
+          </p>
+          <div class="hero__actions">
+            <a href="services.html" class="btn btn--primary">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="projects.html" class="btn btn--outline-light">View Our Projects</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Navigate</h4>
-        <ul class="footer__links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
+      <span class="hero__cue" aria-hidden="true"></span>
+    </section>
+
+    <!-- ============ Stats ============ -->
+    <section class="home-stats">
+      <div class="container">
+        <div class="home-stats__grid">
+          <div class="stat" data-aos="fade-up">
+            <div class="stat__num"><span data-count="114" data-decimals="0">0</span></div>
+            <div class="stat__label">Projects in portfolio</div>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat__num"><span data-count="108" data-decimals="0">0</span></div>
+            <div class="stat__label">Completed projects</div>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat__num">₹<span data-count="146.30" data-decimals="2">0</span><small>&nbsp;Cr</small></div>
+            <div class="stat__label">Total portfolio value</div>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat__num">₹<span data-count="137.65" data-decimals="2">0</span><small>&nbsp;Cr</small></div>
+            <div class="stat__label">Completed project value</div>
+          </div>
+        </div>
+        <p class="home-stats__note">Portfolio figures as stated in the 2026 company profile.</p>
       </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer__links">
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="about.html">Leadership</a></li>
-          <li><a href="services.html">Our Services</a></li>
-        </ul>
+    </section>
+
+    <!-- ============ Who We Are ============ -->
+    <section class="who">
+      <div class="container">
+        <div class="who__grid">
+          <div data-aos="fade-right">
+            <p class="eyebrow">Who We Are</p>
+            <h2>Engineering Experience. Infrastructure for Tomorrow.</h2>
+            <div class="who__copy">
+              <p>Logamalaikannan Government Contractor (KLK) is a civil contracting business based in Madurai, Tamil Nadu, with documented experience in government civil works, particularly water infrastructure, canal rehabilitation, anicuts, drainage structures, earthwork, and public facilities.</p>
+              <p>Our project portfolio reflects experience in both routine civil works and major infrastructure assignments. Building on this foundation, KLK aims to expand into highways, road infrastructure, buildings, and larger civil engineering projects.</p>
+            </div>
+          </div>
+
+          <div class="who__media-wrap corner-frame" data-aos="fade-left">
+            <div class="who__media ph" data-label="Add image: assets/images/homeAbout.jpg">
+              <i class="fa-regular fa-image"></i>
+              <img src="assets/images/homeAbout.jpg" alt="KLK civil works site" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="who__badge">
+              <strong>Madurai, Tamil Nadu</strong>
+              Civil contracting
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Head Office</h4>
-        <ul class="footer__links">
-          <li>No. 3, Kannan Complex,</li>
-          <li>Melur Main Road,Uthangudi,</li>
-          <li>Madurai – 625107,Tamil Nadu</li>
-          <li>Maillll</li>
-        </ul>
+    </section>
+
+    <!-- ============ Core Services ============ -->
+    <section class="services">
+      <div class="container">
+        <div class="sec-head" data-aos="fade-up">
+          <p class="eyebrow">Our Core Services</p>
+          <h2>Six areas of civil work we deliver</h2>
+        </div>
+
+        <div class="svc-grid">
+          <article class="svc-card" data-aos="fade-up">
+            <div class="svc-card__icon"><i class="fa-solid fa-water"></i></div>
+            <h3>Water Infrastructure</h3>
+            <p>Anicuts, canals, tanks, regulators, sluices, and water-management structures.</p>
+          </article>
+
+          <article class="svc-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="svc-card__icon"><i class="fa-solid fa-person-digging"></i></div>
+            <h3>Earthwork &amp; Excavation</h3>
+            <p>Excavation, desilting, bund formation, and channel excavation.</p>
+          </article>
+
+          <article class="svc-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="svc-card__icon"><i class="fa-solid fa-cubes"></i></div>
+            <h3>Concrete &amp; RCC Works</h3>
+            <p>Concrete construction, steel centering, and structural support activities.</p>
+          </article>
+
+          <article class="svc-card" data-aos="fade-up">
+            <div class="svc-card__icon"><i class="fa-solid fa-faucet-drip"></i></div>
+            <h3>Drainage Systems</h3>
+            <p>Supply channels, surplus courses, and drainage structures.</p>
+          </article>
+
+          <article class="svc-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="svc-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Restoration &amp; Rehabilitation</h3>
+            <p>Repair, renovation, restoration, and rehabilitation of existing infrastructure.</p>
+          </article>
+
+          <article class="svc-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="svc-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h3>Public Buildings &amp; Facilities</h3>
+            <p>Institutional repairs, halls, bus stands, and related public infrastructure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Featured Projects ============ -->
+    <section class="projects">
+      <div class="container">
+        <div class="sec-head" data-aos="fade-up">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Major works from our portfolio</h2>
+        </div>
+
+        <div class="proj-grid">
+          <figure class="proj-card" data-aos="zoom-in">
+            <div class="ph" data-label="Add image: assets/images/project1.jpg">
+              <i class="fa-regular fa-image"></i>
+              <img src="assets/images/project1.jpg" alt="Anicut across Vaigai River near Thiruppuvanam" loading="lazy" onerror="this.remove()" />
+            </div>
+            <figcaption class="proj-card__caption">
+              <h3>Anicut Across Vaigai River near Thiruppuvanam</h3>
+              <i class="fa-solid fa-arrow-right"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="proj-card" data-aos="zoom-in" data-aos-delay="150">
+            <div class="ph" data-label="Add image: assets/images/project2.jpg">
+              <i class="fa-regular fa-image"></i>
+              <img src="assets/images/project2.jpg" alt="Left Main Canal of Vaigai River" loading="lazy" onerror="this.remove()" />
+            </div>
+            <figcaption class="proj-card__caption">
+              <h3>Rehabilitation and Modernisation of the Left Main Canal of Vaigai River</h3>
+              <i class="fa-solid fa-arrow-right"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="proj-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="ph" data-label="Add image: assets/images/project3.jpg">
+              <i class="fa-regular fa-image"></i>
+              <img src="assets/images/project3.jpg" alt="Nattar River anicuts" loading="lazy" onerror="this.remove()" />
+            </div>
+            <figcaption class="proj-card__caption">
+              <h3>Renovation of Nattar River and Rehabilitation of Four Anicuts</h3>
+              <i class="fa-solid fa-arrow-right"></i>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="proj__cta" data-aos="fade-up">
+          <a href="projects.html" class="btn btn--primary">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Our Approach ============ -->
+    <section class="approach">
+      <div class="blueprint-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="approach__grid">
+          <div data-aos="fade-right">
+            <p class="eyebrow eyebrow--light">Our Approach</p>
+            <h2>From Proven Experience to Larger Infrastructure</h2>
+            <p class="approach__copy">
+              Our growth strategy focuses on strengthening project management, planning, estimation, quality control, and safety capabilities while building on our existing civil engineering experience.
+            </p>
+            <a href="about.html" class="btn btn--primary">Learn More About KLK <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="approach__chips" data-aos="fade-left">
+            <span class="approach__chip">Project management</span>
+            <span class="approach__chip">Planning</span>
+            <span class="approach__chip">Estimation</span>
+            <span class="approach__chip">Quality control</span>
+            <span class="approach__chip">Safety</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact CTA ============ -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <div data-aos="fade-right">
+          <h2>Have a civil project in mind?</h2>
+          <p>Talk to our team about your next project.</p>
+        </div>
+        <a href="contact.html" class="btn btn--primary" data-aos="fade-left">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo" />
+            <span class="navbar__logo-text">
+              <strong style="color:#fff">KLK <span>Construction</span></strong>
+              <small style="color:rgba(255,255,255,.6)">Government Contractor</small>
+            </span>
+          </a>
+          <p>Civil contracting from Madurai, Tamil Nadu — water infrastructure, public facilities and restoration works.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Water Infrastructure</a></li>
+            <li><a href="services.html">Earthwork &amp; Excavation</a></li>
+            <li><a href="services.html">Restoration</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Logamalaikannan Government Contractor</span>
       </div>
     </div>
+  </footer>
 
-    <div class="footer__bottom">
-      <span>&copy; 2026 KLK Construction. All rights reserved.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 80 });
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
-<script src="js/animations.js"></script>
+    // Navbar shrink on scroll
+    const navbar = document.getElementById("navbar");
+    const onScroll = () => navbar.classList.toggle("is-shrunk", window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    // Mobile menu
+    const toggle = document.getElementById("navToggle");
+    const mobile = document.getElementById("navMobile");
+    toggle.addEventListener("click", () => {
+      const open = toggle.classList.toggle("is-open");
+      mobile.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open);
+    });
+
+    // Stat count-up (adds .is-done on the number box so animation.css glow plays)
+    const counters = document.querySelectorAll("[data-count]");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const run = (el) => {
+      const end = parseFloat(el.dataset.count);
+      const dec = parseInt(el.dataset.decimals || "0", 10);
+      const box = el.closest(".stat__num");
+      if (reduce) { el.textContent = end.toFixed(dec); box.classList.add("is-done"); return; }
+      const dur = 1800, start = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (end * eased).toFixed(dec);
+        if (p < 1) requestAnimationFrame(tick);
+        else box.classList.add("is-done");
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    counters.forEach((c) => io.observe(c));
+  </script>
 </body>
 </html>
