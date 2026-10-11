@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Animation support
+   Base AOS behavior comes from the AOS library itself; this file only
+   tunes durations/easing to match the design tokens and adds the few
+   custom keyframes the site needs beyond scroll-reveal.
+   ========================================================================== */
+
+[data-aos] {
+  transition-duration: 700ms !important;
+  transition-timing-function: cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* Underline sweep used on nav links is handled in style.css via ::after;
+   this keyframe is for the logo mark on load. */
+@keyframes markIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.navbar__logo { animation: markIn 0.6s cubic-bezier(.4,0,.2,1) both; }
+
+/* Gentle pulse for the stat numbers once they finish counting, so the
+   band doesn't feel static after the count-up completes. */
+@keyframes statSettle {
+  0%   { text-shadow: 0 0 0 rgba(226,166,59,0); }
+  40%  { text-shadow: 0 0 18px rgba(226,166,59,0.55); }
+  100% { text-shadow: 0 0 0 rgba(226,166,59,0); }
+}
+.stat__num.is-done { animation: statSettle 0.9s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__logo { animation: none; }
+  .stat__num.is-done { animation: none; }
+}
+/* ==========================================================================
+   About — Overview (two-column: copy + callout stack)
+   ========================================================================== */
+.overview {
+  background: var(--color-bg-alt);
+}
+
+.overview__grid {
+  display: grid;
+  gap: var(--space-7);
+}
+@media (min-width: 1024px) {
+  .overview__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+.overview h2 {
+  font-size: var(--fs-h2);
+  max-width: 18ch;
+  margin-top: var(--space-4);
+}
+
+.overview__desc {
+  margin-top: var(--space-5);
+  color: var(--color-steel);
+  font-size: var(--fs-lead);
+  max-width: 52ch;
+}
+
+/* ---- Right column: numbered callout stack ---- */
+.overview__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.overview__callout {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: var(--space-5) var(--space-6);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notch)) 0,
+    100% var(--notch),
+    100% 100%,
+    0 100%
+  );
+  transition:
+    transform 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.overview__callout:hover {
+  transform: translateX(6px);
+  border-color: var(--color-accent-dark);
+}
+
+.overview__callout-num {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.overview__callout p {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | KLK Construction</title>
+    <meta
+      name="description"
+      content="Get in touch with KLK Construction to discuss your civil works or interior fit-out project."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo">
+          <img
+            src="assets/images/logo.png"
+            alt="KLK Construction"
+            class="navbar__logo-img"
+          />
+          <div class="navbar__logo-text">
+            <strong>KLK<span>.</span></strong>
+            <small>Construction Co.</small>
+          </div>
+        </a>
+
+        <nav class="navbar__links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" class="is-active">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <a href="contact.html" class="btn btn--primary navbar__cta"
+            >Get a Quote</a
+          >
+          <button
+            class="navbar__toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="navbar__mobile">
+        <div class="navbar__mobile__inner">
+          <a href="index.html"><span>01</span>Home</a>
+          <a href="about.html"><span>02</span>About</a>
+          <a href="services.html"><span>03</span>Services</a>
+          <a href="gallery.html"><span>04</span>Gallery</a>
+          <a href="contact.html"><span>05</span>Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-header page-header--contact">
+      <div class="container page-header__inner">
+        <div>
+          <!-- <span class="eyebrow eyebrow--light">Sheet 05 / Contact</span> -->
+          <h1>Let's talk about your project</h1>
+        </div>
+        <p class="page-header__crumb">
+          <a href="index.html">Home</a> <span class="sep">/</span> Contact
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <section class="contact">
+        <div class="container contact__grid">
+          <!-- FORM (LEFT) -->
+          <div class="contact-form corner-frame" data-aos="fade-up">
+            <span class="eyebrow">Send a Message</span>
+            <h2 class="contact-form__title">Get a Free Consultation</h2>
+            <p class="contact-form__note">
+              Fields marked required. We typically reply within 24 hours on
+              working days.
+            </p>
+
+            <!--
+          Endpoint intentionally left unwired — connect Formspree
+          (or your preferred provider) later:
+          e.g. action="https://formspree.io/f/your-id" method="POST"
+        -->
+            <form
+              class="js-contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="d0671669-cb16-44b4-aeb9-0b1aceb60728"
+              />
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-field__label" for="name"
+                    >Full Name *</label
+                  >
+                  <input
+                    class="form-field__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-field__label" for="phone"
+                    >Phone Number *</label
+                  >
+                  <input
+                    class="form-field__input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+91 00000 00000"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-field__label" for="email"
+                    >Email Address *</label
+                  >
+                  <input
+                    class="form-field__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-field__label" for="service"
+                    >Project Type</label
+                  >
+                  <select
+                    class="form-field__select"
+                    id="service"
+                    name="service"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="civil">Civil Works</option>
+                    <option value="interior">
+                      Interior Design &amp; Fit-out
+                    </option>
+                    <option value="renovation">Renovation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label" for="message">Message *</label>
+                <textarea
+                  class="form-field__textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project — location, size, timeline..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary">
+                Send Message <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <p class="form-status" role="status"></p>
+            </form>
+          </div>
+
+          <!-- INFO (RIGHT) -->
+          <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+            <span class="eyebrow eyebrow--light">Contact Info</span>
+
+            <ul class="info-list">
+              <li class="info-list__item">
+                <span class="info-list__icon"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <div>
+                  <p class="info-list__title">Our Office</p>
+                  <p class="info-list__text">
+                    4th Floor, Prestige Business Park,<br />
+                    Avinashi Road, Tiruppur, Tamil Nadu – 641603
+                  </p>
+                </div>
+              </li>
+
+              <li class="info-list__item">
+                <span class="info-list__icon"
+                  ><i class="fa-solid fa-clock"></i
+                ></span>
+                <div>
+                  <p class="info-list__title">Office Hours</p>
+                  <p class="info-list__text">
+                    Mon – Sat: 10:00 – 19:00<br />Sunday: Closed
+                  </p>
+                </div>
+              </li>
+
+              <li class="info-list__item">
+                <span class="info-list__icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <div>
+                  <p class="info-list__title">Email Us</p>
+                  <p class="info-list__text">
+                    <a href="mailto:hello@klkconstruction.example"
+                      >hello@klkconstruction.example</a
+                    >
+                  </p>
+                </div>
+              </li>
+
+              <li class="info-list__item">
+                <span class="info-list__icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                <div>
+                  <p class="info-list__title">Call Us</p>
+                  <p class="info-list__text">
+                    <a href="tel:+910000000000">+91 00000 00000</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-info__socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="container contact-map" data-aos="fade-up">
+          <div class="contact-map__frame corner-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62876.829759609616!2d78.11221359295355!3d9.950437348819488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c42efeff5ab9%3A0x8aef4c193236ae19!2sKLK%20Contractor!5e0!3m2!1sen!2sin!4v1784126969854!5m2!1sen!2sin"
+              width="1080"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+            <div class="contact-map__caption">
+              <span>KLK Construction — Head Office</span>
+              <span>Tiruppur, Tamil Nadu</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="navbar__logo">KLK Construction</a>
+            <p>
+              Construction and interiors, engineered for certainty — from
+              blueprint to handover.
+            </p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="footer__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul class="footer__links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="services.html">Our Services</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Head Office</h4>
+            <ul class="footer__links">
+              <li>No. 3, Kannan Complex,</li>
+              <li>Melur Main Road,Uthangudi,</li>
+              <li>Madurai – 625107,Tamil Nadu</li>
+              <li>Maillll</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>&copy; 2026 KLK Construction. All rights reserved.</span>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>
