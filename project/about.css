@@ -1,4 +1,3 @@
-
 .wrapper {
   display: flex;
   justify-content: center;
@@ -36,11 +35,11 @@
     margin-right: 45px;
 }
 
-  span {
+  .cta span {
     transform: skewX(15deg) 
   }
 
-  span:nth-child(2) {
+  .cta span:nth-child(2) {
     width: 20px;
     margin-left: 30px;
     position: relative;
@@ -85,4 +84,545 @@ path.two {
     100% {
         fill: white;
     }
+}
+/* ==========================================================================
+   about-extra.css — additions for the About page
+   Load AFTER style.css, about.css and animations.css
+   All colors/spacing come from the tokens in style.css
+   ========================================================================== */
+
+/* ---- Keyframes ---- */
+@keyframes gridDrift {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 40px 40px, 40px 40px; }
+}
+@keyframes lineUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes dotFill {
+  from { background: var(--color-surface); color: var(--color-navy); }
+  to   { background: var(--color-navy); color: var(--color-accent); }
+}
+@keyframes dotRing {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 201, 5, 0.6); }
+  100% { box-shadow: 0 0 0 16px rgba(255, 201, 5, 0); }
+}
+
+/* ==========================================================================
+   Scroll progress bar
+   ========================================================================== */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 700;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Page header — grid + title reveal
+   ========================================================================== */
+.page-header--about { overflow: hidden; }
+.page-header__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  animation: gridDrift 30s linear infinite;
+  -webkit-mask-image: linear-gradient(to right, #000, transparent 85%);
+  mask-image: linear-gradient(to right, #000, transparent 85%);
+}
+.ph-title {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  max-width: 24ch;
+}
+.ph-title > span {
+  display: block;
+  transform: translateY(110%);
+  animation: lineUp 0.9s var(--ease) 0.2s forwards;
+}
+.page-header--about .page-header__crumb {
+  animation: fadeUp 0.8s var(--ease) 0.6s both;
+}
+
+/* ==========================================================================
+   Intro — vision / mission card polish
+   ========================================================================== */
+.vmn-card {
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.vmn-card:hover {
+  transform: translateX(8px);
+  border-color: var(--color-accent-dark);
+  box-shadow: -6px 0 0 var(--color-accent);
+}
+.vmn-card__tag i {
+  margin-right: var(--space-2);
+  transition: transform 0.5s var(--ease);
+}
+.vmn-card:hover .vmn-card__tag i { transform: rotate(360deg) scale(1.15); }
+.about-intro__lede h5 + h5 { margin-top: var(--space-3); }
+
+/* ==========================================================================
+   Company information table
+   ========================================================================== */
+.overview__inner { max-width: 1000px; }
+.info-table {
+  margin: var(--space-4) 0 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-top: 3px solid var(--color-accent-dark);
+  clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%);
+}
+.info-row {
+  position: relative;
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-line);
+  transition: background 0.3s var(--ease), padding-left 0.3s var(--ease);
+}
+@media (min-width: 640px) {
+  .info-row {
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-5);
+    align-items: baseline;
+  }
+}
+.info-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s var(--ease);
+}
+.info-row:not(.info-row--head):hover {
+  background: var(--color-bg-alt);
+  padding-left: calc(var(--space-5) + 6px);
+}
+.info-row:not(.info-row--head):hover::before { transform: scaleY(1); }
+.info-row dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-steel);
+}
+.info-row dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.info-row--mono dd {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+.info-row--head {
+  border-top: none;
+  background: var(--color-navy);
+  display: none;
+}
+.info-row--head dt,
+.info-row--head dd {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-white);
+}
+@media (min-width: 640px) {
+  .info-row--head { display: grid; }
+}
+
+/* ==========================================================================
+   Experience at a glance — card polish
+   ========================================================================== */
+.group--exp .group-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
+  z-index: 3;
+}
+.group--exp .group-card:hover::after { transform: scaleX(1); }
+.group--exp .group-card__mark {
+  font-size: 1.3rem;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease), transform 0.6s var(--ease);
+}
+.group--exp .group-card:hover .group-card__mark {
+  background: var(--color-navy);
+  color: var(--color-accent);
+  transform: rotate(225deg);
+}
+/* Touch devices have no hover — show the description under the title */
+@media (hover: none) {
+  .group--exp .group-card__desc {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    background: transparent;
+    border-left: none;
+    padding: var(--space-3) 0 0;
+  }
+  .group--exp .group-card:hover .group-card__content {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Status bands — ₹ values
+   ========================================================================== */
+.stat__unit {
+  font-size: 0.45em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 0.2em;
+}
+.status-band--alt .status-band__grid { max-width: 960px; }
+.status-band--alt .stat__num {
+  font-size: clamp(1.25rem, 0.9rem + 1.8vw, 2.4rem);
+  padding: var(--space-4) var(--space-4);
+  white-space: nowrap;
+}
+.status-note {
+  margin-top: var(--space-6);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   Growth direction — animated 4-stage path
+   ========================================================================== */
+.growth { background: var(--color-bg-alt); }
+.growth__head { margin-bottom: var(--space-7); max-width: 720px; }
+.growth__head h2 { font-size: var(--fs-h2); }
+
+.growth__track { position: relative; }
+.growth__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Mobile: vertical line */
+.growth__line {
+  position: absolute;
+  left: 27px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: var(--color-line);
+}
+.growth__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent-dark);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 2.2s var(--ease) 0.3s;
+}
+.growth__track.aos-animate .growth__fill { transform: scaleY(1); }
+
+.growth__step {
+  position: relative;
+  padding-left: 88px;
+  padding-bottom: var(--space-2);
+}
+.growth__dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+  font-size: 1.15rem;
+  transform: rotate(45deg) scale(0.8);
+  transition: transform 0.5s var(--ease);
+}
+.growth__dot i { transform: rotate(-45deg); }
+.growth__track .growth__step:hover .growth__dot { transform: rotate(225deg) scale(1.08); }
+.growth__track .growth__step:hover .growth__dot i { transform: rotate(-225deg); }
+
+.growth__track.aos-animate .growth__dot {
+  animation: dotFill 0.5s var(--ease) forwards, dotRing 1.2s ease-out 1;
+  transform: rotate(45deg) scale(1);
+}
+.growth__track.aos-animate .growth__step:nth-child(1) .growth__dot { animation-delay: 0.3s, 0.3s; }
+.growth__track.aos-animate .growth__step:nth-child(2) .growth__dot { animation-delay: 0.9s, 0.9s; }
+.growth__track.aos-animate .growth__step:nth-child(3) .growth__dot { animation-delay: 1.5s, 1.5s; }
+.growth__track.aos-animate .growth__step:nth-child(4) .growth__dot { animation-delay: 2.1s, 2.1s; }
+
+.growth__track.aos-animate .growth__step { animation: fadeUp 0.7s var(--ease) both; }
+.growth__track.aos-animate .growth__step:nth-child(1) { animation-delay: 0.2s; }
+.growth__track.aos-animate .growth__step:nth-child(2) { animation-delay: 0.7s; }
+.growth__track.aos-animate .growth__step:nth-child(3) { animation-delay: 1.2s; }
+.growth__track.aos-animate .growth__step:nth-child(4) { animation-delay: 1.7s; }
+
+.growth__num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: var(--space-2);
+}
+.growth__step h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-2);
+}
+.growth__step p {
+  color: var(--color-steel);
+  font-size: var(--fs-small);
+  max-width: 34ch;
+}
+
+/* Desktop: horizontal line */
+@media (min-width: 1024px) {
+  .growth__steps { grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+  .growth__line {
+    left: 28px;
+    right: 28px;
+    top: 27px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+  .growth__fill {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .growth__track.aos-animate .growth__fill { transform: scaleX(1); }
+  .growth__step {
+    padding-left: 0;
+    padding-top: 88px;
+  }
+}
+
+/* ==========================================================================
+   Leadership card polish
+   ========================================================================== */
+.leader-card__avatar {
+  transition: transform 0.4s var(--ease), background 0.4s var(--ease);
+}
+.leader-card:hover .leader-card__avatar {
+  transform: translateY(-8px);
+  background: var(--color-accent-dark);
+}
+
+/* ==========================================================================
+   CTA band — drifting grid
+   ========================================================================== */
+.cta-band { position: relative; overflow: hidden; }
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(var(--color-line-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line-dark) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridDrift 40s linear infinite;
+  pointer-events: none;
+}
+.cta-band__inner { position: relative; z-index: 1; }
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .growth__fill { transform: none !important; }
+  .growth__dot {
+    transform: rotate(45deg) !important;
+    background: var(--color-navy);
+    color: var(--color-accent);
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Experience — expanding panels
+   ========================================================================== */
+.xp__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.xp__panel {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  color: var(--color-white);
+  background: var(--color-ink);
+  clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%);
+}
+.xp__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 12px, rgba(255,201,5,.1) 12px 24px),
+    #2c2c2c;
+  transform: scale(1.12);
+  transition: transform 1s var(--ease), filter 0.6s var(--ease);
+}
+.xp__bg::after {
+  content: attr(data-label);
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+.xp__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.xp__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(10,10,10,.92) 0%, rgba(10,10,10,.25) 65%);
+}
+.xp__panel::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.2s;
+}
+.xp__icon {
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-5);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  background: rgba(255,201,5,.15);
+  border: 1px solid var(--color-accent);
+  transition: background 0.4s var(--ease), color 0.4s var(--ease), transform 0.6s var(--ease);
+}
+.xp__label { display: none; }
+.xp__body {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+}
+.xp__sub {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.xp__body h3 {
+  color: var(--color-white);
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
+  margin-bottom: var(--space-2);
+}
+.xp__body p {
+  max-width: 36ch;
+  font-size: var(--fs-small);
+  color: rgba(255,255,255,.82);
+}
+
+/* Active state (all panels on mobile, one at a time on desktop) */
+.xp__panel.is-active .xp__bg { transform: scale(1); }
+.xp__panel.is-active::after { transform: scaleX(1); }
+.xp__panel.is-active .xp__icon {
+  background: var(--color-accent);
+  color: var(--color-navy);
+  transform: rotate(360deg);
+}
+
+@media (min-width: 1024px) {
+  .xp__row { flex-direction: row; height: 480px; }
+  .xp__panel {
+    flex: 1;
+    min-height: 0;
+    transition: flex 0.8s var(--ease);
+  }
+  .xp__panel.is-active { flex: 3.4; }
+
+  .xp__bg { filter: grayscale(1) brightness(0.7); }
+  .xp__panel.is-active .xp__bg { filter: none; }
+
+  .xp__label {
+    display: block;
+    position: absolute;
+    left: var(--space-5);
+    bottom: var(--space-5);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    transition: opacity 0.3s var(--ease);
+  }
+  .xp__panel.is-active .xp__label { opacity: 0; }
+
+  .xp__body {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.4s var(--ease), transform 0.5s var(--ease);
+  }
+  .xp__panel.is-active .xp__body {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+  }
 }

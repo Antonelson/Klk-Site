@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us — KLK Construction | Construction &amp; Interiors</title>
+    <title>About Us — KLK | Logamalaikannan Government Contractor</title>
     <meta
       name="description"
-      content="KLK Construction is a construction and interiors company delivering precision-built spaces — from vision to handover."
+      content="Logamalaikannan Government Contractor (KLK) is a proprietorship civil contracting business in Madurai, Tamil Nadu, with a documented portfolio of government civil works."
     />
 
     <!-- Google Fonts -->
@@ -30,8 +30,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./about.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/about-extra.css" />
   </head>
   <body>
+    <!-- Scroll progress -->
+    <div class="read-progress" id="readProgress" aria-hidden="true"></div>
+
     <!-- ============================= NAVBAR ============================= -->
     <header class="navbar">
       <div class="navbar__inner">
@@ -88,10 +92,13 @@
 
     <!-- ============================= PAGE HEADER ============================= -->
     <section class="page-header page-header--about">
+      <div class="page-header__grid blueprint-grid" aria-hidden="true"></div>
       <div class="container page-header__inner">
         <div>
           <!-- <span class="eyebrow eyebrow--light">Sheet 02 / About</span> -->
-          <h1>About the Company</h1>
+          <h1 class="ph-title">
+            <span>About Logamalaikannan Government Contractor</span>
+          </h1>
         </div>
         <p class="page-header__crumb">
           <a href="index.html">Home</a> <span class="sep">/</span>
@@ -110,10 +117,17 @@
           </h2>
           <div class="about-intro__lede">
             <h5>
-              At KLK Contractors, our values are built on integrity, quality,
-              safety, and excellence. Through professionalism, teamwork, and
-              innovation, we deliver reliable and sustainable infrastructure
-              that creates lasting value for our clients and communities.
+              Logamalaikannan Government Contractor (KLK) is a proprietorship
+              civil contracting business operating from Madurai, Tamil Nadu. The
+              company has a documented portfolio of government civil works
+              spanning water infrastructure, rehabilitation, drainage,
+              earthwork, concrete structures, and public facilities.
+            </h5>
+            <h5>
+              With experience supported by government work certificates, project
+              records, and execution documentation, KLK continues to build its
+              civil engineering capabilities and pursue opportunities in larger
+              infrastructure projects.
             </h5>
           </div>
         </div>
@@ -126,97 +140,182 @@
           >
             <span class="vmn-card__tag">
               <i class="fa-regular fa-eye"></i>
-              Vision
+              Our Vision
             </span>
             <h5>
-              Our vision is to become one of India’s most trusted and respected
-              infrastructure and construction companies by consistently
-              delivering excellence, embracing innovation, and operating with
-              integrity. We aspire to build sustainable and high-quality
-              infrastructure that contributes to economic growth, strengthens
-              communities, and creates lasting value for future generations.
+              To build on our government civil-work experience and develop our
+              capabilities in highways, buildings, and larger infrastructure
+              projects.
             </h5>
           </div>
 
           <div class="vmn-card" data-aos="fade-up" data-aos-delay="100">
             <span class="vmn-card__tag">
               <i class="fa-solid fa-bullseye"></i>
-              Mission
+              Our Mission
             </span>
             <h5>
-              Our mission is to deliver high-quality civil engineering and
-              infrastructure projects through technical excellence, efficient
-              project management, and a strong commitment to safety and timely
-              completion. We strive to exceed client expectations by adopting
-              modern engineering technologies, sustainable construction
-              practices, and continuous improvement while maintaining the
-              highest standards of professionalism and reliability.
+              To execute civil infrastructure works with a focus on sound
+              engineering practices, systematic project planning,
+              quality-conscious execution, and the development of durable public
+              infrastructure.
             </h5>
           </div>
-
-          <!-- <div class="vmn-card" data-aos="fade-up" data-aos-delay="200">
-        <span class="vmn-card__tag">Note</span>
-        <h3>A working principle, not a slogan.</h3>
-        <p>Every drawing we're handed comes back as a building — on schedule, on budget, on spec.</p>
-      </div> -->
         </div>
       </div>
     </section>
 
-    <!-- ============================= OVERVIEW ============================= -->
+    <!-- ============================= COMPANY OVERVIEW / INFORMATION ============================= -->
     <section class="overview">
       <div class="container overview__inner">
-        <span class="eyebrow" data-aos="fade-up">Company Overview</span>
-        <h2 data-aos="fade-up">A single team, from blueprint to handover.</h2>
-        <p class="overview__desc" data-aos="fade-up" data-aos-delay="100">
-          KLK Construction was founded to close the gap between architects'
-          drawings and what actually gets built on site. We operate as one
-          integrated team across structural construction, interior fit-out, and
-          materials sourcing, so nothing gets lost in handoffs between
-          contractors. Every project is assigned a dedicated site engineer and a
-          single point of contact, so clients are never chasing updates across
-          departments. Our crews are trained to the same quality checklist on
-          every site, whether it's a 3-bedroom home or a 40,000 sq. ft.
-          commercial fit-out. The result is a build process that stays
-          predictable, even when the project itself is anything but simple.
-        </p>
+        <span class="eyebrow" data-aos="fade-up">Company Information</span>
+        <h2 data-aos="fade-up">Company details at a glance.</h2>
+
+        <dl class="info-table" data-aos="fade-up" data-aos-delay="100">
+          <div class="info-row info-row--head" aria-hidden="true">
+            <dt>Detail</dt>
+            <dd>Information</dd>
+          </div>
+          <div class="info-row" data-aos="fade-up" data-aos-delay="0">
+            <dt>Legal name</dt>
+            <dd>Katturaja Logamalaik Kannan</dd>
+          </div>
+          <div class="info-row" data-aos="fade-up" data-aos-delay="80">
+            <dt>Trade name</dt>
+            <dd>Logamalaikannan Government Contractor</dd>
+          </div>
+          <div class="info-row" data-aos="fade-up" data-aos-delay="160">
+            <dt>Business constitution</dt>
+            <dd>Proprietorship</dd>
+          </div>
+          <div
+            class="info-row info-row--mono"
+            data-aos="fade-up"
+            data-aos-delay="240"
+          >
+            <dt>GSTIN</dt>
+            <dd>33ADVPL6196J1ZS</dd>
+          </div>
+          <div class="info-row" data-aos="fade-up" data-aos-delay="320">
+            <dt>Principal office</dt>
+            <dd>
+              No. 3, Kannan Complex, Melur Main Road, Uthangudi, Madurai, Tamil
+              Nadu – 625107
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- ============================= GROUP / SUB-COMPANIES ============================= -->
-    <section class="group">
+    <!-- ============================= EXPERIENCE AT A GLANCE ============================= -->
+    <section class="group group--exp xp">
       <div class="container">
         <span class="eyebrow" data-aos="fade-up"
-          >The KLK Construction Group</span
+          >Our Experience at a Glance</span
         >
         <h2
           data-aos="fade-up"
           style="margin-bottom: var(--space-6); max-width: 22ch"
         >
-          Four companies, one standard of work.
+          Four areas that define our work.
         </h2>
 
-        <div class="group-grid">
-          <div class="group-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="group-card__mark"><span>AI</span></div>
-            <h3>KLK Construction Infra</h3>
-            <p>Structural &amp; civil</p>
-          </div>
-          <div class="group-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="group-card__mark"><span>AN</span></div>
-            <h3>KLK Construction Interiors</h3>
-            <p>Fit-out &amp; design</p>
-          </div>
-          <div class="group-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="group-card__mark"><span>AM</span></div>
-            <h3>KLK Construction Materials</h3>
-            <p>Sourcing &amp; supply</p>
-          </div>
-          <div class="group-card" data-aos="fade-up" data-aos-delay="240">
-            <div class="group-card__mark"><span>AR</span></div>
-            <h3>KLK Construction Realty</h3>
-            <p>Land &amp; development</p>
-          </div>
+        <div class="xp__row" data-aos="fade-up">
+          <article class="xp__panel is-active" tabindex="0">
+            <div
+              class="xp__bg"
+              data-label="Add image: assets/images/exp-government.jpg"
+            >
+              <img
+                src="assets/images/exp-government.jpg"
+                alt="Government civil works"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <div class="xp__shade"></div>
+            <div class="xp__icon"><i class="fa-solid fa-landmark"></i></div>
+            <span class="xp__label" aria-hidden="true"
+              >Government Civil Works</span
+            >
+            <div class="xp__body">
+              <span class="xp__sub">PWD / WRD</span>
+              <h3>Government Civil Works</h3>
+              <p>Documented PWD/WRD work experience.</p>
+            </div>
+          </article>
+
+          <article class="xp__panel" tabindex="0">
+            <div
+              class="xp__bg"
+              data-label="Add image: assets/images/exp-water.jpg"
+            >
+              <img
+                src="assets/images/exp-water.jpg"
+                alt="Water infrastructure"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <div class="xp__shade"></div>
+            <div class="xp__icon"><i class="fa-solid fa-water"></i></div>
+            <span class="xp__label" aria-hidden="true"
+              >Water Infrastructure</span
+            >
+            <div class="xp__body">
+              <span class="xp__sub">Canals &amp; anicuts</span>
+              <h3>Water Infrastructure</h3>
+              <p>Experience across canals, anicuts, tanks, and regulators.</p>
+            </div>
+          </article>
+
+          <article class="xp__panel" tabindex="0">
+            <div
+              class="xp__bg"
+              data-label="Add image: assets/images/exp-public.jpg"
+            >
+              <img
+                src="assets/images/exp-public.jpg"
+                alt="Public infrastructure"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <div class="xp__shade"></div>
+            <div class="xp__icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <span class="xp__label" aria-hidden="true"
+              >Public Infrastructure</span
+            >
+            <div class="xp__body">
+              <span class="xp__sub">Buildings &amp; facilities</span>
+              <h3>Public Infrastructure</h3>
+              <p>Building-related works and public-facility projects.</p>
+            </div>
+          </article>
+
+          <article class="xp__panel" tabindex="0">
+            <div
+              class="xp__bg"
+              data-label="Add image: assets/images/exp-growth.jpg"
+            >
+              <img
+                src="assets/images/exp-growth.jpg"
+                alt="Highways and larger works"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <div class="xp__shade"></div>
+            <div class="xp__icon"><i class="fa-solid fa-road"></i></div>
+            <span class="xp__label" aria-hidden="true">Future Growth</span>
+            <div class="xp__body">
+              <span class="xp__sub">Highways &amp; larger works</span>
+              <h3>Future Growth</h3>
+              <p>Strategic development in highways and larger civil works.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -229,15 +328,15 @@
         >
         <div class="status-band__grid">
           <div class="stat" data-aos="fade-up">
-            <div class="stat__num" data-count-to="114" data-suffix="+">0</div>
+            <div class="stat__num" data-count-to="114" data-suffix="">0</div>
             <div class="stat__label">Projects</div>
           </div>
           <div class="stat" data-aos="fade-up">
-            <div class="stat__num" data-count-to="6" data-suffix="+">0</div>
+            <div class="stat__num" data-count-to="6" data-suffix="">0</div>
             <div class="stat__label">Projects Ongoing</div>
           </div>
           <div class="stat" data-aos="fade-up" data-aos-delay="120">
-            <div class="stat__num" data-count-to="108" data-suffix="+">0</div>
+            <div class="stat__num" data-count-to="108" data-suffix="">0</div>
             <div class="stat__label">Projects Completed</div>
           </div>
         </div>
@@ -246,21 +345,93 @@
     <section class="status-band status-band--alt blueprint-grid">
       <div class="container">
         <span class="eyebrow eyebrow--light" data-aos="fade-up"
-          >Project Status</span
+          >Project Value</span
         >
         <div class="status-band__grid">
           <div class="stat" data-aos="fade-up">
-            <div class="stat__num" data-count-to="100" data-suffix="+">0</div>
+            <div class="stat__num">
+              <span>₹</span
+              ><span data-cv="146.30" data-decimals="2">146.30</span
+              ><span class="stat__unit">Cr</span>
+            </div>
             <div class="stat__label">Total Value</div>
           </div>
           <div class="stat" data-aos="fade-up" data-aos-delay="120">
-            <div class="stat__num" data-count-to="100" data-suffix="+">0</div>
+            <div class="stat__num">
+              <span>₹</span
+              ><span data-cv="137.65" data-decimals="2">137.65</span
+              ><span class="stat__unit">Cr</span>
+            </div>
             <div class="stat__label">Completed Value</div>
           </div>
-          <div class="stat" data-aos="fade-up" data-aos-delay="120">
-            <div class="stat__num" data-count-to="100" data-suffix="+">0</div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="240">
+            <div class="stat__num">
+              <span>₹</span><span data-cv="8.65" data-decimals="2">8.65</span
+              ><span class="stat__unit">Cr</span>
+            </div>
             <div class="stat__label">Ongoing Value</div>
           </div>
+        </div>
+        <p class="status-note" data-aos="fade-up">
+          Portfolio figures as stated in the 2026 company profile.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================= GROWTH DIRECTION ============================= -->
+    <section class="growth">
+      <div class="container">
+        <div class="growth__head" data-aos="fade-up">
+          <span class="eyebrow">Our Growth Direction</span>
+          <h2>Four stages of growth.</h2>
+        </div>
+
+        <div class="growth__track" data-aos="fade">
+          <div class="growth__line" aria-hidden="true">
+            <span class="growth__fill"></span>
+          </div>
+          <ol class="growth__steps">
+            <li class="growth__step">
+              <span class="growth__dot"
+                ><i class="fa-solid fa-shield-halved"></i
+              ></span>
+              <span class="growth__num">Stage 01</span>
+              <h3>Strengthen</h3>
+              <p>
+                Improve planning, estimation, project management, quality
+                assurance, and safety.
+              </p>
+            </li>
+            <li class="growth__step">
+              <span class="growth__dot"><i class="fa-solid fa-road"></i></span>
+              <span class="growth__num">Stage 02</span>
+              <h3>Expand</h3>
+              <p>
+                Pursue suitable road formation, drainage, culvert, and
+                rehabilitation projects.
+              </p>
+            </li>
+            <li class="growth__step">
+              <span class="growth__dot"
+                ><i class="fa-solid fa-chart-line"></i
+              ></span>
+              <span class="growth__num">Stage 03</span>
+              <h3>Scale</h3>
+              <p>
+                Develop resources and project controls for larger infrastructure
+                contracts.
+              </p>
+            </li>
+            <li class="growth__step">
+              <span class="growth__dot"><i class="fa-solid fa-city"></i></span>
+              <span class="growth__num">Stage 04</span>
+              <h3>Diversify</h3>
+              <p>
+                Grow building and public-facility capabilities alongside
+                highways.
+              </p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
@@ -278,10 +449,11 @@
 
         <div class="leaders-grid">
           <div class="leader-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="leader-card__avatar">RK</div>
-            <h3>Ravi Kumar</h3>
-            <p>Founder &amp; CEO</p>
+            <div class="leader-card__avatar">KL</div>
+            <h3>Katturaja Logamalaik Kannan</h3>
+            <p>Proprietor</p>
           </div>
+          <!-- Previous placeholder cards (replace with real team members when available):
           <div class="leader-card" data-aos="fade-up" data-aos-delay="80">
             <div class="leader-card__avatar">SP</div>
             <h3>Sandra Paul</h3>
@@ -297,6 +469,7 @@
             <h3>Anita Thomas</h3>
             <p>Head of Operations</p>
           </div>
+          -->
         </div>
       </div>
     </section>
@@ -314,7 +487,7 @@
         <!-- <a href="contact.html" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Contact Us <i class="fa-solid fa-arrow-right"></i></a> -->
         <!-- designed by me... enjoy! -->
         <div class="wrapper">
-          <a class="cta" href="#">
+          <a class="cta" href="contact.html">
             <span>Contact Us</span>
             <span>
               <svg
@@ -362,8 +535,8 @@
           <div class="footer__brand">
             <a href="index.html" class="navbar__logo">KLK Construction</a>
             <p>
-              Construction and interiors, engineered for certainty — from
-              blueprint to handover.
+              Civil contracting from Madurai, Tamil Nadu — water infrastructure,
+              public facilities and restoration works.
             </p>
           </div>
           <div>
@@ -415,5 +588,77 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+
+    <!-- About page extras: scroll progress + value counters -->
+    <script>
+      // Scroll progress bar
+      (function () {
+        var bar = document.getElementById("readProgress");
+        function update() {
+          var h = document.documentElement.scrollHeight - window.innerHeight;
+          var p = h > 0 ? window.scrollY / h : 0;
+          bar.style.transform = "scaleX(" + p + ")";
+        }
+        window.addEventListener("scroll", update, { passive: true });
+        update();
+      })();
+
+      // Value counters (₹ figures with decimals)
+      (function () {
+        var els = document.querySelectorAll("[data-cv]");
+        if (!els.length || !("IntersectionObserver" in window)) return;
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (reduce) return;
+
+        els.forEach(function (el) {
+          el.textContent = (0).toFixed(
+            parseInt(el.dataset.decimals || "0", 10),
+          );
+        });
+
+        function run(el) {
+          var end = parseFloat(el.dataset.cv);
+          var dec = parseInt(el.dataset.decimals || "0", 10);
+          var box = el.closest(".stat__num");
+          var dur = 1800,
+            start = performance.now();
+          function tick(now) {
+            var p = Math.min((now - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = (end * eased).toFixed(dec);
+            if (p < 1) requestAnimationFrame(tick);
+            else if (box) box.classList.add("is-done");
+          }
+          requestAnimationFrame(tick);
+        }
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                run(e.target);
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.6 },
+        );
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+      const xpPanels = document.querySelectorAll(".xp__panel");
+      xpPanels.forEach((panel) => {
+        const activate = () => {
+          xpPanels.forEach((p) => p.classList.remove("is-active"));
+          panel.classList.add("is-active");
+        };
+        panel.addEventListener("mouseenter", activate);
+        panel.addEventListener("focus", activate);
+        panel.addEventListener("click", activate);
+      });
+    </script>
   </body>
 </html>
