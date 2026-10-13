@@ -29,21 +29,21 @@
     <link rel="stylesheet" href="css/animations.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar" id="navbar">
       <div class="navbar__inner">
         <a href="index.html" class="navbar__logo">
           <img
             src="assets/images/logo.png"
-            alt="KLK Construction"
+            alt="KLK logo"
             class="navbar__logo-img"
           />
-          <div class="navbar__logo-text">
-            <strong>KLK<span>.</span></strong>
-            <small>Construction Co.</small>
-          </div>
+          <span class="navbar__logo-text">
+            <strong>KLK <span>Construction</span></strong>
+            <small>Government Contractor</small>
+          </span>
         </a>
 
-        <nav class="navbar__links">
+        <nav class="navbar__links" aria-label="Main">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
@@ -52,14 +52,8 @@
         </nav>
 
         <div class="navbar__actions">
-          <a href="contact.html" class="btn btn--primary navbar__cta"
-            >Get a Quote</a
-          >
-          <button
-            class="navbar__toggle"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
+          <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
+          <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -288,19 +282,21 @@
         </div>
       </section>
     </main>
-    <!-- ============================= FOOTER ============================= -->
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
           <div class="footer__brand">
-            <a href="index.html" class="navbar__logo">KLK Construction</a>
-            <p>
-              Construction and interiors, engineered for certainty — from
-              blueprint to handover.
-            </p>
+            <a href="index.html" class="navbar__logo">
+              <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo" />
+              <span class="navbar__logo-text">
+                <strong style="color:#fff">KLK <span>Construction</span></strong>
+                <small style="color:rgba(255,255,255,.6)">Government Contractor</small>
+              </span>
+            </a>
+            <p>Civil contracting from Madurai, Tamil Nadu — water infrastructure, public facilities and restoration works.</p>
           </div>
           <div>
-            <h4>Navigate</h4>
+            <h4>Pages</h4>
             <ul class="footer__links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
@@ -309,43 +305,27 @@
             </ul>
           </div>
           <div>
-            <h4>Company</h4>
+            <h4>Services</h4>
             <ul class="footer__links">
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="about.html">Leadership</a></li>
-              <li><a href="services.html">Our Services</a></li>
+              <li><a href="services.html">Water Infrastructure</a></li>
+              <li><a href="services.html">Earthwork &amp; Excavation</a></li>
+              <li><a href="services.html">Restoration</a></li>
             </ul>
           </div>
           <div>
-            <h4>Head Office</h4>
+            <h4>Contact</h4>
             <ul class="footer__links">
-              <li>No. 3, Kannan Complex,</li>
-              <li>Melur Main Road,Uthangudi,</li>
-              <li>Madurai – 625107,Tamil Nadu</li>
-              <li>Maillll</li>
+              <li><a href="contact.html">Contact page</a></li>
             </ul>
           </div>
         </div>
-
         <div class="footer__bottom">
-          <span>&copy; 2026 KLK Construction. All rights reserved.</span>
-          <div class="footer__socials">
-            <a href="#" aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a href="#" aria-label="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-          </div>
+          <span>© 2026 Logamalaikannan Government Contractor</span>
         </div>
       </div>
     </footer>
 
     <!-- AOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>

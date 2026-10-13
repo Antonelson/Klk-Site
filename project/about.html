@@ -30,28 +30,27 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./about.css" />
     <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/about-extra.css" />
   </head>
   <body>
     <!-- Scroll progress -->
     <div class="read-progress" id="readProgress" aria-hidden="true"></div>
 
     <!-- ============================= NAVBAR ============================= -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
       <div class="navbar__inner">
         <a href="index.html" class="navbar__logo">
           <img
             src="assets/images/logo.png"
-            alt="KLK Construction Logo"
+            alt="KLK logo"
             class="navbar__logo-img"
           />
-          <div>
-            <span>KLK</span> CONSTRUCTION
-            <small></small>
-          </div>
+          <span class="navbar__logo-text">
+            <strong>KLK <span>Construction</span></strong>
+            <small>Government Contractor</small>
+          </span>
         </a>
 
-        <nav class="navbar__links" aria-label="Primary">
+        <nav class="navbar__links" aria-label="Main">
           <a href="index.html">Home</a>
           <a href="about.html" class="is-active">About</a>
           <a href="services.html">Services</a>
@@ -60,35 +59,22 @@
         </nav>
 
         <div class="navbar__actions">
-          <a href="contact.html" class="btn btn--primary navbar__cta"
-            >Get a Quote</a
-          >
-          <button
-            class="navbar__toggle"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
+          <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
+          <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
       </div>
-
-      <div class="navbar__mobile">
-        <div class="navbar__mobile__inner">
-          <a href="index.html"><span>01</span>Home</a>
-          <a href="about.html"><span>02</span>About</a>
-          <a href="services.html"><span>03</span>Services</a>
-          <a href="gallery.html"><span>04</span>Gallery</a>
-          <a href="contact.html"><span>05</span>Contact</a>
-          <a
-            href="contact.html"
-            class="btn btn--primary"
-            style="margin-top: 1rem; width: fit-content"
-            >Get a Quote</a
-          >
-        </div>
-      </div>
     </header>
+    <div class="navbar__mobile" id="navMobile">
+      <div class="navbar__mobile__inner">
+        <a href="index.html"><span>01</span>Home</a>
+        <a href="about.html"><span>02</span>About</a>
+        <a href="services.html"><span>03</span>Services</a>
+        <a href="gallery.html"><span>04</span>Gallery</a>
+        <a href="contact.html"><span>05</span>Contact</a>
+      </div>
+    </div>
 
     <!-- ============================= PAGE HEADER ============================= -->
     <section class="page-header page-header--about">
@@ -533,14 +519,20 @@
       <div class="container">
         <div class="footer__top">
           <div class="footer__brand">
-            <a href="index.html" class="navbar__logo">KLK Construction</a>
+              <a href="index.html" class="navbar__logo">
+                <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo" />
+                <span class="navbar__logo-text">
+                  <strong style="color:#fff">KLK <span>Construction</span></strong>
+                  <small style="color:rgba(255,255,255,.6)">Government Contractor</small>
+                </span>
+              </a>
             <p>
               Civil contracting from Madurai, Tamil Nadu — water infrastructure,
               public facilities and restoration works.
             </p>
           </div>
           <div>
-            <h4>Navigate</h4>
+            <h4>Pages</h4>
             <ul class="footer__links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
@@ -549,37 +541,23 @@
             </ul>
           </div>
           <div>
-            <h4>Company</h4>
+            <h4>Services</h4>
             <ul class="footer__links">
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="about.html">Leadership</a></li>
-              <li><a href="services.html">Our Services</a></li>
+              <li><a href="services.html">Water Infrastructure</a></li>
+              <li><a href="services.html">Earthwork &amp; Excavation</a></li>
+              <li><a href="services.html">Restoration</a></li>
             </ul>
           </div>
           <div>
-            <h4>Head Office</h4>
+            <h4>Contact</h4>
             <ul class="footer__links">
-              <li>No. 3, Kannan Complex,</li>
-              <li>Melur Main Road,Uthangudi,</li>
-              <li>Madurai – 625107,Tamil Nadu</li>
-              <li>Maillll</li>
+              <li><a href="contact.html">Contact page</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer__bottom">
-          <span>&copy; 2026 KLK Construction. All rights reserved.</span>
-          <div class="footer__socials">
-            <a href="#" aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a href="#" aria-label="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-          </div>
+          <span>© 2026 Logamalaikannan Government Contractor</span>
         </div>
       </div>
     </footer>
