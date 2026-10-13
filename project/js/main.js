@@ -25,12 +25,14 @@
 
   /* ---- Mobile hamburger ---- */
   function closeMenu() {
+    if (!toggle || !mobileMenu) return;
     toggle.classList.remove("is-open");
     mobileMenu.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
   function openMenu() {
+    if (!toggle || !mobileMenu) return;
     toggle.classList.add("is-open");
     mobileMenu.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
@@ -46,6 +48,9 @@
     });
     window.addEventListener("resize", function () {
       if (window.innerWidth >= 1024) closeMenu();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeMenu();
     });
   }
 })();
