@@ -175,6 +175,7 @@
 .hero .ph i { color: var(--color-accent); }
 .hero__media img { animation: heroZoom 22s ease-in-out infinite alternate; }
 
+
 /* Stats strip overlapping the hero edge */
 .hero-stats {
   padding-block: 0;

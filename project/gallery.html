@@ -1,139 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery — KLK Construction | Construction &amp; Interiors</title>
-<meta name="description" content="Browse completed projects and site work from KLK Construction — structural builds and interior fit-outs.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — KLK Construction | Construction &amp; Interiors</title>
+    <meta
+      name="description"
+      content="Browse completed projects and site work from KLK Construction — structural builds and interior fit-outs."
+    />
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-<!-- AOS (Animate On Scroll) -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-<!-- GLightbox -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <!-- GLightbox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
 
-<!-- Site styles -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animations.css">
-</head>
-<body>
-
-<!-- ============================= NAVBAR ============================= -->
-<header class="navbar" id="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-    <img src="assets/images/logo.png" alt="KLK logo" class="navbar__logo-img">
-    <span class="navbar__logo-text">
-      <strong>KLK <span>Construction</span></strong>
-      <small>Government Contractor</small>
-    </span>
-</a>
-
-    <nav class="navbar__links" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html" class="is-active">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="navbar__actions">
-      <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
-      <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="navbar__mobile">
-    <div class="navbar__mobile__inner">
-      <a href="index.html"><span>01</span>Home</a>
-      <a href="about.html"><span>02</span>About</a>
-      <a href="services.html"><span>03</span>Services</a>
-      <a href="gallery.html"><span>04</span>Gallery</a>
-      <a href="contact.html"><span>05</span>Contact</a>
-    </div>
-  </div>
-</header>
-
-<!-- ============================= PAGE HEADER ============================= -->
-<section class="page-header page-header--gallery">
-    <div class="container page-header__inner">
-    <div>
-      <h1>Project Gallery</h1>
-    </div>
-    <p class="page-header__crumb">
-      <a href="index.html">Home</a> <span class="sep">/</span> <span>Gallery</span>
-    </p>
-  </div>
-</section>
-
-<!-- ============================= GALLERY CONTENT ============================= -->
-<!--
-  Build: filterable image grid with .glightbox anchors, category filter tabs (All/Structural/Interiors),
-  CTA band.
-  Insert those sections here.
--->
-
-
-<!-- ============================= FOOTER ============================= -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <!-- ============================= NAVBAR ============================= -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
         <a href="index.html" class="navbar__logo">
-          <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo">
+          <img
+            src="assets/images/logo.png"
+            alt="KLK logo"
+            class="navbar__logo-img"
+          />
           <span class="navbar__logo-text">
-            <strong style="color:#fff">KLK <span>Construction</span></strong>
-            <small style="color:rgba(255,255,255,.6)">Government Contractor</small>
+            <strong>KLK <span>Construction</span></strong>
+            <small>Government Contractor</small>
           </span>
         </a>
-        <p>Construction and interiors, engineered for certainty — from blueprint to handover.</p>
-      </div>
-      <div>
-        <h4>Pages</h4>
-        <ul class="footer__links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul class="footer__links">
-          <li><a href="services.html">Water Infrastructure</a></li>
-          <li><a href="services.html">Earthwork &amp; Excavation</a></li>
-          <li><a href="services.html">Restoration</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul class="footer__links">
-          <li><a href="contact.html">Contact page</a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="footer__bottom">
-      <span>© 2026 Logamalaikannan Government Contractor</span>
-    </div>
-  </div>
-</footer>
+        <nav class="navbar__links" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html" class="is-active">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- GLightbox -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/animations.js"></script>
-</body>
+        <div class="navbar__actions">
+          <a href="contact.html" class="btn btn--primary navbar__cta"
+            >Get in touch</a
+          >
+          <button
+            class="navbar__toggle"
+            id="navToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="navbar__mobile">
+        <div class="navbar__mobile__inner">
+          <a href="index.html"><span>01</span>Home</a>
+          <a href="about.html"><span>02</span>About</a>
+          <a href="services.html"><span>03</span>Services</a>
+          <a href="gallery.html"><span>04</span>Gallery</a>
+          <a href="contact.html"><span>05</span>Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================= PAGE HEADER ============================= -->
+    <section class="page-header page-header--about">
+      <div class="page-header__grid blueprint-grid" aria-hidden="true"></div>
+      <div class="container page-header__inner">
+        <div>
+          <!-- <span class="eyebrow eyebrow--light">Sheet 02 / About</span> -->
+          <h1 class="ph-title">
+            <span>Gallery</span>
+          </h1>
+        </div>
+        <p class="page-header__crumb">
+          <a href="index.html">Home</a> <span class="sep">/</span>
+          <span>Gallery</span>
+        </p>
+      </div>
+    </section>
+
+    <main class="gal">
+      <!-- <header class="gal-head">
+        <h1>Our Project Gallery</h1>
+        <p>
+          Browse our work by category, then open any project for the full
+          details.
+        </p>
+      </header> -->
+
+      <!-- category buttons -->
+      <div class="gal-pills" id="pills"></div>
+
+      <!-- carousel -->
+      <div class="gal-stage" id="stage"></div>
+
+      <div class="gal-controls">
+        <button class="gal-arrow" id="prev" aria-label="Previous image">
+          &larr;
+        </button>
+        <div class="gal-caption">
+          <strong id="capTitle"></strong>
+          <button class="gal-explore" id="explore">Explore this project</button>
+        </div>
+        <button class="gal-arrow" id="next" aria-label="Next image">
+          &rarr;
+        </button>
+      </div>
+
+      <!-- details (rendered by js/gallery.js) -->
+      <section class="gal-details" id="details"></section>
+    </main>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="navbar__logo">
+              <img
+                class="navbar__logo-img"
+                src="assets/images/logo.png"
+                alt="KLK logo"
+              />
+              <span class="navbar__logo-text">
+                <strong style="color: #fff"
+                  >KLK <span>Construction</span></strong
+                >
+                <small style="color: rgba(255, 255, 255, 0.6)"
+                  >Government Contractor</small
+                >
+              </span>
+            </a>
+            <p>
+              Civil contracting from Madurai, Tamil Nadu — water infrastructure,
+              public facilities and restoration works.
+            </p>
+          </div>
+          <div>
+            <h4>Pages</h4>
+            <ul class="footer__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <ul class="footer__links">
+              <li><a href="services.html">Water Infrastructure</a></li>
+              <li><a href="services.html">Earthwork &amp; Excavation</a></li>
+              <li><a href="services.html">Restoration</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer__links">
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 Logamalaikannan Government Contractor</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="gallery.js"></script>
+  </body>
 </html>

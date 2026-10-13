@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Gallery page
+   Uses the shared tokens and components from css/style.css.
+   ========================================================================== */
+.page-header--gallery {
+  background:
+    linear-gradient(rgba(26, 26, 26, 0.72), rgba(26, 26, 26, 0.72)),
+    linear-gradient(135deg, var(--color-navy), var(--color-navy-2));
+}
+
+.gal {
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-5) var(--space-9);
+}
+
+.gal-head {
+  max-width: 58ch;
+  margin: 0 auto var(--space-6);
+  text-align: center;
+}
+
+.gal-head h1 {
+  font-size: var(--fs-h2);
+}
+
+.gal-head p {
+  margin-top: var(--space-3);
+  color: var(--color-steel);
+}
+
+.gal-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+
+.gal-pill {
+  min-height: 44px;
+  padding: 0.65em 1.2em;
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.gal-pill:hover,
+.gal-pill:focus-visible {
+  border-color: var(--color-accent-dark);
+  color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.gal-pill.is-on {
+  border-color: var(--color-navy);
+  color: var(--color-white);
+  background: var(--color-navy);
+}
+
+.gal-stage {
+  position: relative;
+  height: calc(var(--gallery-slide-height) + 30px);
+  overflow: hidden;
+  border-block: 1px solid var(--color-line);
+  background:
+    linear-gradient(rgba(255, 224, 130, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 224, 130, 0.22) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.gal {
+  --gallery-slide-width: 280px;
+  --gallery-slide-height: 350px;
+}
+
+.gal-slide {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: var(--gallery-slide-width);
+  height: var(--gallery-slide-height);
+  overflow: hidden;
+  border: 1px solid var(--color-white);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 16px 30px rgba(26, 26, 26, 0.24);
+  transition:
+    transform 0.5s var(--ease),
+    opacity 0.5s var(--ease),
+    filter 0.5s var(--ease);
+}
+
+.gal-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gal-slide.is-active {
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.gal-slide.is-next {
+  transform: translateX(-50%) translateX(190px) scale(0.78);
+  z-index: 2;
+  opacity: 0.62;
+  filter: brightness(0.78);
+}
+
+.gal-slide.is-prev {
+  transform: translateX(-50%) translateX(-190px) scale(0.78);
+  z-index: 2;
+  opacity: 0.62;
+  filter: brightness(0.78);
+}
+
+.gal-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.gal-arrow {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid var(--color-ink);
+  border-radius: 50%;
+  color: var(--color-ink);
+  font-size: 1.1rem;
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.gal-arrow:hover,
+.gal-arrow:focus-visible {
+  color: var(--color-white);
+  background: var(--color-navy);
+  transform: translateY(-2px);
+}
+
+.gal-caption {
+  min-width: 220px;
+  display: grid;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.gal-caption strong {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+}
+
+.gal-explore {
+  justify-self: center;
+  min-height: 44px;
+  padding: 0.9em 1.4em;
+  border-radius: var(--radius-sm);
+  color: var(--color-navy);
+  background: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notch)) 0,
+    100% var(--notch),
+    100% 100%,
+    var(--notch) 100%,
+    0 calc(100% - var(--notch))
+  );
+  transition:
+    background 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.gal-explore:hover,
+.gal-explore:focus-visible {
+  background: var(--color-line);
+  transform: translateY(-2px);
+}
+
+.gal-details {
+  margin-top: var(--space-9);
+}
+
+.gal-group + .gal-group {
+  margin-top: var(--space-9);
+}
+
+.gal-group > h2 {
+  padding-bottom: var(--space-3);
+  border-bottom: 3px solid var(--color-accent);
+  color: var(--color-ink);
+  font-size: var(--fs-h2);
+}
+
+.gal-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  scroll-margin-top: calc(var(--nav-h-shrunk) + var(--space-5));
+  transition:
+    border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+
+.gal-project:hover {
+  border-color: var(--color-accent-dark);
+  box-shadow: 0 12px 28px rgba(26, 26, 26, 0.1);
+  transform: translateY(-3px);
+}
+
+.gal-project:nth-of-type(even) img {
+  order: 2;
+}
+
+.gal-project img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.gal-info h3 {
+  font-size: var(--fs-h3);
+}
+
+.gal-meta {
+  margin: var(--space-2) 0 var(--space-4);
+  color: var(--color-steel);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+}
+
+.gal-info p {
+  line-height: var(--lh-body);
+}
+
+.gal-info ul {
+  margin: var(--space-4) 0 0;
+  padding-left: var(--space-5);
+  line-height: var(--lh-body);
+}
+
+.gal-project.flash {
+  animation: galFlash 1.6s ease-out;
+}
+
+@keyframes galFlash {
+  from { background: var(--color-bg-alt); }
+  to { background: var(--color-surface); }
+}
+
+@media (min-width: 768px) {
+  .gal {
+    padding-inline: var(--space-7);
+  }
+}
+
+@media (max-width: 720px) {
+  .gal {
+    --gallery-slide-width: 200px;
+    --gallery-slide-height: 260px;
+    padding-top: var(--space-7);
+  }
+
+  .gal-slide.is-next {
+    transform: translateX(-50%) translateX(140px) scale(0.75);
+  }
+
+  .gal-slide.is-prev {
+    transform: translateX(-50%) translateX(-140px) scale(0.75);
+  }
+
+  .gal-controls {
+    gap: var(--space-3);
+  }
+
+  .gal-caption {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .gal-project {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-4);
+  }
+
+  .gal-project:nth-of-type(even) img {
+    order: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gal-slide,
+  .gal-pill,
+  .gal-arrow,
+  .gal-explore,
+  .gal-project {
+    transition: none;
+  }
+
+  .gal-project.flash {
+    animation: none;
+  }
+}
