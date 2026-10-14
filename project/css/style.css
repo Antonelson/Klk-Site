@@ -1280,6 +1280,7 @@ section {
 
 
 /* <--klk .klk getintouch button navbar --> */
+
 .klk-getintouch-btn {
   position: relative;
   display: inline-flex;
@@ -1301,6 +1302,7 @@ section {
 .klk-getintouch-btn svg {
   transition: transform 0.25s ease;
 }
+
 
 .klk-getintouch-btn::before {
   content: "";
@@ -1334,6 +1336,16 @@ section {
 .klk-getintouch-btn:focus-visible {
   outline: 3px solid rgba(245, 158, 11, 0.5);
   outline-offset: 3px;
+}
+.klk-getintouch-btn.dim {
+  background: transparent;
+  box-shadow: none;
+}
+.klk-getintouch-btn.dim:hover {
+  background: rgba(245, 158, 11, 0.1); /* Subtle transparent orange overlay */
+  border-color: #d97706;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
 }
 @media (prefers-reduced-motion: reduce) {
   .group-card__content,
