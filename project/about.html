@@ -59,8 +59,16 @@
         </nav>
 
         <div class="navbar__actions">
-          <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
-          <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-controls="navMobile" aria-expanded="false">
+          <a href="contact.html" class="btn btn--primary navbar__cta"
+            >Get in touch</a
+          >
+          <button
+            class="navbar__toggle"
+            id="navToggle"
+            aria-label="Open menu"
+            aria-controls="navMobile"
+            aria-expanded="false"
+          >
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -193,6 +201,85 @@
       </div>
     </section>
 
+    <!-- ============================= PORTFOLIO TREND ============================= -->
+    <section class="trend">
+      <div class="container">
+        <span class="eyebrow" data-aos="fade-up">Portfolio Trend</span>
+        <h2 data-aos="fade-up">Documented work value by year.</h2>
+
+        <div class="trend__chart" data-aos="fade-up">
+          <svg
+            id="trendChart"
+            viewBox="0 0 640 300"
+            role="img"
+            aria-label="Documented work value by year, in crores of rupees"
+          ></svg>
+        </div>
+
+        <span class="eyebrow" data-aos="fade-up"
+          >Annual Portfolio Position</span
+        >
+        <h2 data-aos="fade-up">Projects and documented work value.</h2>
+
+        <dl class="info-table" data-aos="fade-up">
+          <div class="info-row info-row--head trend__row" aria-hidden="true">
+            <dt>Year</dt>
+            <dd>Projects</dd>
+            <dd class="trend__val">Value</dd>
+          </div>
+          <div class="info-row trend__row" data-value="1.90">
+            <dt>2018</dt>
+            <dd>4 projects</dd>
+            <dd class="trend__val">₹1.90 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="0.18">
+            <dt>2019</dt>
+            <dd>2 projects</dd>
+            <dd class="trend__val">₹0.18 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="2.47">
+            <dt>2020</dt>
+            <dd>9 projects</dd>
+            <dd class="trend__val">₹2.47 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="1.92">
+            <dt>2021</dt>
+            <dd>21 projects</dd>
+            <dd class="trend__val">₹1.92 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="15.43">
+            <dt>2022</dt>
+            <dd>29 projects</dd>
+            <dd class="trend__val">₹15.43 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="26.83">
+            <dt>2023</dt>
+            <dd>5 projects</dd>
+            <dd class="trend__val">₹26.83 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="6.47">
+            <dt>2024</dt>
+            <dd>3 projects</dd>
+            <dd class="trend__val">₹6.47 Cr</dd>
+          </div>
+          <div class="info-row trend__row trend__row--peak" data-value="58.04">
+            <dt>2025</dt>
+            <dd>26 projects</dd>
+            <dd class="trend__val">₹58.04 Cr</dd>
+          </div>
+          <div class="info-row trend__row" data-value="5.30">
+            <dt>2026*</dt>
+            <dd>8 projects</dd>
+            <dd class="trend__val">₹5.30 Cr</dd>
+          </div>
+        </dl>
+
+        <p class="trend__note" data-aos="fade-up">
+          <strong>2025 — highest recorded year in this series.</strong>
+          Documented work value: ₹58.04 Cr. *2026 is a partial year.
+        </p>
+      </div>
+    </section>
     <!-- ============================= EXPERIENCE AT A GLANCE ============================= -->
     <section class="group group--exp xp">
       <div class="container">
@@ -520,13 +607,20 @@
         <div class="footer__top">
           <div class="footer__brand">
             <a href="index.html" class="navbar__logo">
-              <img class="navbar__logo-img" src="assets/images/logo.png" alt="KLK logo" />
+              <img
+                class="navbar__logo-img"
+                src="assets/images/logo.png"
+                alt="KLK logo"
+              />
               <span class="navbar__logo-text">
                 <strong>KLK <span>Construction</span></strong>
                 <small>Government Contractor</small>
               </span>
             </a>
-            <p>Civil contracting from Madurai, Tamil Nadu — water infrastructure, public facilities and restoration works.</p>
+            <p>
+              Civil contracting from Madurai, Tamil Nadu — water infrastructure,
+              public facilities and restoration works.
+            </p>
           </div>
           <div>
             <h4>Pages</h4>
@@ -634,6 +728,95 @@
         panel.addEventListener("focus", activate);
         panel.addEventListener("click", activate);
       });
+      // Portfolio trend chart (reads values from the table rows)
+      (function () {
+        var rows = document.querySelectorAll(".trend__row[data-value]");
+        var svg = document.getElementById("trendChart");
+        if (!rows.length || !svg) return;
+
+        var pts = Array.prototype.map.call(rows, function (r) {
+          return {
+            year: r.querySelector("dt").textContent.replace("*", ""),
+            v: parseFloat(r.dataset.value),
+          };
+        });
+        var W = 640,
+          H = 300,
+          L = 40,
+          R = 30,
+          T = 30,
+          B = 30;
+        var peak = Math.max.apply(
+          null,
+          pts.map(function (p) {
+            return p.v;
+          }),
+        );
+        var MAX = Math.ceil(peak / 20) * 20;
+        var x = function (i) {
+          return L + (i * (W - L - R)) / (pts.length - 1);
+        };
+        var y = function (v) {
+          return H - B - (v / MAX) * (H - T - B);
+        };
+
+        var s = "";
+        for (var t = 0; t <= MAX; t += 20) {
+          s +=
+            '<line class="trend__grid" x1="' +
+            L +
+            '" x2="' +
+            (W - R) +
+            '" y1="' +
+            y(t) +
+            '" y2="' +
+            y(t) +
+            '"/>' +
+            '<text class="trend__axis trend__axis--y" x="' +
+            (L - 8) +
+            '" y="' +
+            (y(t) + 3) +
+            '">' +
+            t +
+            "</text>";
+        }
+        s +=
+          '<polyline class="trend__line" points="' +
+          pts
+            .map(function (p, i) {
+              return x(i) + "," + y(p.v);
+            })
+            .join(" ") +
+          '"/>';
+        pts.forEach(function (p, i) {
+          var top = p.v === peak;
+          s +=
+            '<circle class="trend__dot' +
+            (top ? " trend__dot--peak" : "") +
+            '" cx="' +
+            x(i) +
+            '" cy="' +
+            y(p.v) +
+            '" r="' +
+            (top ? 6 : 4) +
+            '"/>' +
+            '<text class="trend__lbl" x="' +
+            x(i) +
+            '" y="' +
+            (y(p.v) - 11) +
+            '">' +
+            p.v.toFixed(2) +
+            " Cr</text>" +
+            '<text class="trend__axis trend__axis--x" x="' +
+            x(i) +
+            '" y="' +
+            (H - 10) +
+            '">' +
+            p.year +
+            "</text>";
+        });
+        svg.innerHTML = s;
+      })();
     </script>
   </body>
 </html>
