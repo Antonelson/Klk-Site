@@ -38,8 +38,13 @@
       </nav>
 
       <div class="navbar__actions">
-        <a href="contact.html" class="btn btn--primary navbar__cta">Get in touch</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-controls="navMobile" aria-expanded="false">
+        <a href="contact.html" class="klk-getintouch-btn">
+          Get in touch
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <button class="navbar__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -425,23 +430,9 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
   <script>
     AOS.init({ once: true, offset: 80 });
-
-    // Navbar shrink on scroll
-    const navbar = document.getElementById("navbar");
-    const onScroll = () => navbar.classList.toggle("is-shrunk", window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    // Mobile menu
-    const toggle = document.getElementById("navToggle");
-    const mobile = document.getElementById("navMobile");
-    toggle.addEventListener("click", () => {
-      const open = toggle.classList.toggle("is-open");
-      mobile.classList.toggle("is-open", open);
-      toggle.setAttribute("aria-expanded", open);
-    });
 
     // Stat count-up (adds .is-done on the number box so animation.css glow plays)
     const counters = document.querySelectorAll("[data-count]");

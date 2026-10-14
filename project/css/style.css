@@ -418,8 +418,8 @@ section {
   gap: var(--space-5);
 }
 
-.navbar__cta {
-  display: none;
+.navbar__actions .klk-getintouch-btn {
+  display: inline-flex;
 }
 
 /* ================= Hamburger ================= */
@@ -498,15 +498,17 @@ section {
     display: flex;
   }
 
-  .navbar__cta {
-    display: inline-flex;
-  }
-
   .navbar__toggle {
     display: none;
   }
 
   .navbar__mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar__actions .klk-getintouch-btn {
     display: none;
   }
 }
@@ -1276,6 +1278,63 @@ section {
   pointer-events: auto;
 }
 
+
+/* <--klk .klk getintouch button navbar --> */
+.klk-getintouch-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.3px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.klk-getintouch-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.klk-getintouch-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+}
+
+.klk-getintouch-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(217, 119, 6, 0.5);
+}
+
+.klk-getintouch-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.klk-getintouch-btn:hover::before {
+  left: 130%;
+  transition: left 0.6s ease;
+}
+
+.klk-getintouch-btn:active {
+  transform: translateY(-1px);
+}
+
+.klk-getintouch-btn:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.5);
+  outline-offset: 3px;
+}
 @media (prefers-reduced-motion: reduce) {
   .group-card__content,
   .group-card__desc {
